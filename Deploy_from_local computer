@@ -1,0 +1,16 @@
+Deploy from the local computer
+Initialize the repo and add the server repo as a remote
+
+cd <your-app>
+
+# Initialize git repo
+git init
+
+# Add the server repo as a remote called "deploy"
+git remote add deploy ssh://<your-name>@<your-ip>/srv/git/<your-app>.git/
+
+Push to the server (and deploy)
+
+git add . 
+git commit -m "<commit message>"
+git push deploy master
